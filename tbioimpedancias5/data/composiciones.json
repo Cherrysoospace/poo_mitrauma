@@ -1,0 +1,20 @@
+[{
+  "aguaCorporal": 51,
+  "persona": {
+    "edadEstimada": 54,
+    "fechaNacimiento": "1971-02-06",
+    "correo": "heisthevillain@ministrymagic.gov",
+    "identificacion": "C0001",
+    "sexo": "M",
+    "nombreCompleto": "Augustus Reginald Blishwick Bennet"
+  },
+  "masaMuscular": 28.1,
+  "masaOsea": 4,
+  "grasaVisceral": 5,
+  "peso": 68,
+  "fechaRegistro": "2024-10-12",
+  "proteinas": 15,
+  "estatura": 192,
+  "grasaCorporal": 14,
+  "imc": 18.446180555555557
+}]

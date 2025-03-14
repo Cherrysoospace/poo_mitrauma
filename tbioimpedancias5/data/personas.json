@@ -1,0 +1,34 @@
+[
+  {
+    "edadEstimada": 54,
+    "fechaNacimiento": "1971-02-06",
+    "correo": "heisthevillain@ministrymagic.gov",
+    "identificacion": "C0001",
+    "sexo": "M",
+    "nombreCompleto": "Augustus Reginald Blishwick Bennet"
+  },
+  {
+    "edadEstimada": 36,
+    "fechaNacimiento": "1988-10-24",
+    "correo": "hedidwhathedid@hell.com",
+    "identificacion": "C0002",
+    "sexo": "M",
+    "nombreCompleto": "Víctor Aurelius Doherty Bulstrode"
+  },
+  {
+    "edadEstimada": 34,
+    "fechaNacimiento": "1990-04-28",
+    "correo": "ppoisonapple@ministrymagic.gov",
+    "identificacion": "C0003",
+    "sexo": "M",
+    "nombreCompleto": "Enzo Aarón Verthan-Lefèvre"
+  },
+  {
+    "edadEstimada": 52,
+    "fechaNacimiento": "1972-06-17",
+    "correo": "ggeveepoir@rrosefactory.com",
+    "identificacion": "C0004",
+    "sexo": "F",
+    "nombreCompleto": "Geneviève Espoir Lefèvre Dubois"
+  }
+]
