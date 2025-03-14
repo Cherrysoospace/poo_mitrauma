@@ -1,0 +1,26 @@
+[
+  {
+    "tasaImpuesto": 0.19,
+    "precioBase": 16000,
+    "categoria": "ELECTRONICA",
+    "precioFinal": 19040,
+    "id": "P001",
+    "nombre": "Memoria USB"
+  },
+  {
+    "tasaImpuesto": 0.1,
+    "precioBase": 76000,
+    "categoria": "ROPA",
+    "precioFinal": 83600,
+    "id": "P002",
+    "nombre": "Chaqueta Impermeable"
+  },
+  {
+    "tasaImpuesto": 0.05,
+    "precioBase": 19000,
+    "categoria": "ALIMENTO",
+    "precioFinal": 19950,
+    "id": "P003",
+    "nombre": "Cubeta de huevos"
+  }
+]
