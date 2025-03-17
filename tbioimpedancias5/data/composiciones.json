@@ -1,20 +1,288 @@
-[{
-  "aguaCorporal": 51,
-  "persona": {
-    "edadEstimada": 54,
-    "fechaNacimiento": "1971-02-06",
-    "correo": "heisthevillain@ministrymagic.gov",
-    "identificacion": "C0001",
-    "sexo": "M",
-    "nombreCompleto": "Augustus Reginald Blishwick Bennet"
+[
+  {
+    "persona": {
+      "edadEstimada": 54,
+      "fechaNacimiento": "1971-02-06",
+      "correo": "heisthevillain@ministrymagic.gov",
+      "identificacion": "C0001",
+      "sexo": "M",
+      "nombreCompleto": "Augustus Reginald Blishwick Bennet"
+    },
+    "clasificarGrasaVisceral": "Bueno",
+    "peso": 82.5,
+    "grasaVisceral": 8,
+    "fechaRegistro": "2024-03-01",
+    "proteinas": 18.5,
+    "estatura": 175,
+    "clasificarImc": "Sobrepeso",
+    "grasaCorporal": 22.1,
+    "aguaCorporal": 55,
+    "masaMuscular": 38.2,
+    "masaOsea": 3.2,
+    "imc": 26.9
   },
-  "masaMuscular": 28.1,
-  "masaOsea": 4,
-  "grasaVisceral": 5,
-  "peso": 68,
-  "fechaRegistro": "2024-10-12",
-  "proteinas": 15,
-  "estatura": 192,
-  "grasaCorporal": 14,
-  "imc": 18.446180555555557
-}]
+  {
+    "persona": {
+      "edadEstimada": 54,
+      "fechaNacimiento": "1971-02-06",
+      "correo": "heisthevillain@ministrymagic.gov",
+      "identificacion": "C0001",
+      "sexo": "M",
+      "nombreCompleto": "Augustus Reginald Blishwick Bennet"
+    },
+    "clasificarGrasaVisceral": "Bueno",
+    "peso": 81.8,
+    "grasaVisceral": 7,
+    "fechaRegistro": "2024-03-05",
+    "proteinas": 18.6,
+    "estatura": 175,
+    "clasificarImc": "Sobrepeso",
+    "grasaCorporal": 21.5,
+    "aguaCorporal": 55.5,
+    "masaMuscular": 37.9,
+    "masaOsea": 3.2,
+    "imc": 26.7
+  },
+  {
+    "persona": {
+      "edadEstimada": 36,
+      "fechaNacimiento": "1988-10-24",
+      "correo": "hedidwhathedid@hell.com",
+      "identificacion": "C0002",
+      "sexo": "M",
+      "nombreCompleto": "Víctor Aurelius Doherty Bulstrode"
+    },
+    "clasificarGrasaVisceral": "Bueno",
+    "peso": 75.3,
+    "grasaVisceral": 6,
+    "fechaRegistro": "2024-03-02",
+    "proteinas": 19.2,
+    "estatura": 178,
+    "clasificarImc": "Peso Normal",
+    "grasaCorporal": 19.8,
+    "aguaCorporal": 57.2,
+    "masaMuscular": 40.1,
+    "masaOsea": 3.5,
+    "imc": 23.8
+  },
+  {
+    "persona": {
+      "edadEstimada": 36,
+      "fechaNacimiento": "1988-10-24",
+      "correo": "hedidwhathedid@hell.com",
+      "identificacion": "C0002",
+      "sexo": "M",
+      "nombreCompleto": "Víctor Aurelius Doherty Bulstrode"
+    },
+    "clasificarGrasaVisceral": "Excelente",
+    "peso": 74.9,
+    "grasaVisceral": 5,
+    "fechaRegistro": "2024-03-06",
+    "proteinas": 19.4,
+    "estatura": 178,
+    "clasificarImc": "Peso Normal",
+    "grasaCorporal": 19.3,
+    "aguaCorporal": 57.5,
+    "masaMuscular": 39.8,
+    "masaOsea": 3.5,
+    "imc": 23.7
+  },
+  {
+    "persona": {
+      "edadEstimada": 34,
+      "fechaNacimiento": "1990-04-28",
+      "correo": "ppoisonapple@ministrymagic.gov",
+      "identificacion": "C0003",
+      "sexo": "M",
+      "nombreCompleto": "Enzo Aarón Verthan-Lefèvre"
+    },
+    "clasificarGrasaVisceral": "Bueno",
+    "peso": 90,
+    "grasaVisceral": 10,
+    "fechaRegistro": "2024-03-03",
+    "proteinas": 18.8,
+    "estatura": 185,
+    "clasificarImc": "Sobrepeso",
+    "grasaCorporal": 25,
+    "aguaCorporal": 54,
+    "masaMuscular": 42.5,
+    "masaOsea": 3.8,
+    "imc": 26.3
+  },
+  {
+    "persona": {
+      "edadEstimada": 34,
+      "fechaNacimiento": "1990-04-28",
+      "correo": "ppoisonapple@ministrymagic.gov",
+      "identificacion": "C0003",
+      "sexo": "M",
+      "nombreCompleto": "Enzo Aarón Verthan-Lefèvre"
+    },
+    "clasificarGrasaVisceral": "Bueno",
+    "peso": 89.5,
+    "grasaVisceral": 9,
+    "fechaRegistro": "2024-03-07",
+    "proteinas": 18.9,
+    "estatura": 185,
+    "clasificarImc": "Sobrepeso",
+    "grasaCorporal": 24.5,
+    "aguaCorporal": 54.2,
+    "masaMuscular": 42.2,
+    "masaOsea": 3.8,
+    "imc": 26.1
+  },
+  {
+    "persona": {
+      "edadEstimada": 45,
+      "fechaNacimiento": "1979-09-12",
+      "correo": "johndoe@example.com",
+      "identificacion": "C0006",
+      "sexo": "M",
+      "nombreCompleto": "Johnathan Marcus Doe"
+    },
+    "clasificarGrasaVisceral": "Bueno",
+    "peso": 85.4,
+    "grasaVisceral": 7,
+    "fechaRegistro": "2024-03-08",
+    "proteinas": 18.7,
+    "estatura": 180,
+    "clasificarImc": "Sobrepeso",
+    "grasaCorporal": 20.3,
+    "aguaCorporal": 56,
+    "masaMuscular": 39.5,
+    "masaOsea": 3.4,
+    "imc": 26.4
+  },
+  {
+    "persona": {
+      "edadEstimada": 45,
+      "fechaNacimiento": "1979-09-12",
+      "correo": "johndoe@example.com",
+      "identificacion": "C0006",
+      "sexo": "M",
+      "nombreCompleto": "Johnathan Marcus Doe"
+    },
+    "clasificarGrasaVisceral": "Bueno",
+    "peso": 84.9,
+    "grasaVisceral": 6,
+    "fechaRegistro": "2024-03-12",
+    "proteinas": 18.8,
+    "estatura": 180,
+    "clasificarImc": "Sobrepeso",
+    "grasaCorporal": 19.8,
+    "aguaCorporal": 56.3,
+    "masaMuscular": 39.2,
+    "masaOsea": 3.4,
+    "imc": 26.2
+  },
+  {
+    "persona": {
+      "edadEstimada": 20,
+      "fechaNacimiento": "2004-07-15",
+      "correo": "lucia.morales@example.com",
+      "identificacion": "C0007",
+      "sexo": "F",
+      "nombreCompleto": "Lucía Morales García"
+    },
+    "clasificarGrasaVisceral": "Excelente",
+    "peso": 60.2,
+    "grasaVisceral": 5,
+    "fechaRegistro": "2024-03-10",
+    "proteinas": 17.2,
+    "estatura": 165,
+    "clasificarImc": "Peso Normal",
+    "grasaCorporal": 22,
+    "aguaCorporal": 54.5,
+    "masaMuscular": 35.5,
+    "masaOsea": 2.5,
+    "imc": 22.1
+  },
+  {
+    "persona": {
+      "edadEstimada": 20,
+      "fechaNacimiento": "2004-07-15",
+      "correo": "lucia.morales@example.com",
+      "identificacion": "C0007",
+      "sexo": "F",
+      "nombreCompleto": "Lucía Morales García"
+    },
+    "clasificarGrasaVisceral": "Excelente",
+    "peso": 59.8,
+    "grasaVisceral": 4,
+    "fechaRegistro": "2024-03-15",
+    "proteinas": 17.3,
+    "estatura": 165,
+    "clasificarImc": "Peso Normal",
+    "grasaCorporal": 21.5,
+    "aguaCorporal": 54.8,
+    "masaMuscular": 35.2,
+    "masaOsea": 2.5,
+    "imc": 21.9
+  },
+  {
+    "persona": {
+      "edadEstimada": 19,
+      "fechaNacimiento": "2005-11-22",
+      "correo": "daniel.torres@example.com",
+      "identificacion": "C0008",
+      "sexo": "M",
+      "nombreCompleto": "Daniel Torres Ramírez"
+    },
+    "clasificarGrasaVisceral": "Bueno",
+    "peso": 72.4,
+    "grasaVisceral": 6,
+    "fechaRegistro": "2024-03-11",
+    "proteinas": 18.5,
+    "estatura": 175,
+    "clasificarImc": "Peso Normal",
+    "grasaCorporal": 18.7,
+    "aguaCorporal": 57,
+    "masaMuscular": 40,
+    "masaOsea": 3.2,
+    "imc": 23.6
+  },
+  {
+    "persona": {
+      "edadEstimada": 19,
+      "fechaNacimiento": "2005-11-22",
+      "correo": "daniel.torres@example.com",
+      "identificacion": "C0008",
+      "sexo": "M",
+      "nombreCompleto": "Daniel Torres Ramírez"
+    },
+    "clasificarGrasaVisceral": "Excelente",
+    "peso": 71.9,
+    "grasaVisceral": 5,
+    "fechaRegistro": "2024-03-16",
+    "proteinas": 18.6,
+    "estatura": 175,
+    "clasificarImc": "Peso Normal",
+    "grasaCorporal": 18.2,
+    "aguaCorporal": 57.2,
+    "masaMuscular": 39.8,
+    "masaOsea": 3.2,
+    "imc": 23.5
+  },
+  {
+    "persona": {
+      "edadEstimada": 36,
+      "fechaNacimiento": "1988-10-24",
+      "correo": "hedidwhathedid@hell.com",
+      "identificacion": "C0002",
+      "sexo": "M",
+      "nombreCompleto": "Víctor Aurelius Doherty Bulstrode"
+    },
+    "clasificarGrasaVisceral": "Excelente",
+    "peso": 65,
+    "grasaVisceral": 5,
+    "fechaRegistro": "2025-02-14",
+    "proteinas": 11,
+    "estatura": 170,
+    "clasificarImc": "Peso Normal",
+    "grasaCorporal": 21,
+    "aguaCorporal": 51,
+    "masaMuscular": 21,
+    "masaOsea": 3.5,
+    "imc": 22.49134948096886
+  }
+]

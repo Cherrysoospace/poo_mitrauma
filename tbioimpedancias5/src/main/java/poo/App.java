@@ -3,6 +3,7 @@ package poo;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
@@ -12,6 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import poo.helpers.Utils;
+import poo.model.ClasiPesos;
 import poo.model.ComposicionCorporal;
 import poo.model.Persona;
 import poo.helpers.Keyboard;
@@ -57,6 +59,15 @@ public class App {
                         break;
                     case 7:
                         buscarComposicionDPersona();
+                        break;
+                    case 8:
+                        generarReportePorPeso();
+                        break;
+                    case 9:
+                        reporteIMCExtremos();
+                        break;
+                    case 10:
+                        listarPersonasGrasaVisceralExcelente();
                         break;
                     case 0:
                         salir();
@@ -119,35 +130,22 @@ public class App {
 
     private static void inicializarComposiciones() throws Exception {
         String fileName = "./data/composiciones.json";
+
+        // Crear instancia del ArrayList<ComposicionCorporal>
         composicion = new ArrayList<>();
-    
+
+        // Si existe el archivo de composiciones corporales
         if (Utils.fileExists(fileName)) {
+            // Leer el archivo y crear un JSONArray con su contenido
             JSONArray jsonArray = new JSONArray(Utils.readText(fileName));
-    
+
+            // Recorrer los elementos del JSONArray y crear instancias de
+            // ComposicionCorporal
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject json = jsonArray.getJSONObject(i);
-                String idPersona = json.getString("persona"); // Ahora solo guardamos la ID
-                
-                Persona personaAsociada = buscarPersonaPorID(idPersona);
-                if (personaAsociada == null) {
-                    System.out.println("Advertencia: No se encontró la persona con ID " + idPersona);
-                    continue; // O manejarlo de otra manera
-                }
-    
-                ComposicionCorporal composicionCorporal = new ComposicionCorporal(json);
-                composicionCorporal.setPersona(personaAsociada);
-                composicion.add(composicionCorporal);
+                composicion.add(new ComposicionCorporal(json));
             }
         }
-    }
-    
-    private static Persona buscarPersonaPorID(String id) {
-        for (Persona p : personas) {
-            if (p.getIdentificacion().equals(id)) {
-                return p;
-            }
-        }
-        return null;
     }
 
     private static List<ComposicionCorporal> obtenerComposicionesDePersona(String identificacion) {
@@ -179,6 +177,9 @@ public class App {
                 + "  5 - Buscar una persona\n" // 
                 + "  6 - Buscar una composición corporal\n" //check
                 + "  7 - Buscar las composiciones corporales de una persona\n"
+                + "  8 - Generar reporte por clasificación de peso\n"	// check
+                + "  9 - Reporte de IMC extremos\n" // check
+                + "  10 - Listar personas con grasa visceral excelente\n" // check
                 + String.format("  %s0 - Salir%s\n", Utils.RED, Utils.RESET) +
                 String.format("\nElija una opción (%s0 para salir%s) > ", Utils.RED, Utils.RESET);
 
@@ -223,37 +224,6 @@ public class App {
             Utils.writeJSON(personas, "./data/personas.json");
         }
     }
-
-    /*
-     * private static void crearPersona() throws Exception {
-     * ArrayList<Persona> personas = new ArrayList<>();
-     * 
-     * do {
-     * String identificacion = Keyboard.readString("Identificación: ");
-     * if (identificacion.isBlank())
-     * break;
-     * String nombreCompleto = Keyboard.readString("Nombre completo: ");
-     * // Para la fecha de nacimiento, lee los componentes individuales
-     * LocalDate fechaNacimiento =
-     * Keyboard.readDate("Fecha de nacimiento (YYYY-MM-DD): ");
-     * int year = fechaNacimiento.getYear();
-     * int month = fechaNacimiento.getMonthValue();
-     * int day = fechaNacimiento.getDayOfMonth();
-     * 
-     * // Para el sexo, lee un String y extrae el primer carácter
-     * String sexoStr = Keyboard.readString(1, 1,
-     * "Ingrese su sexo (M/F): ").toUpperCase();
-     * char sexo = sexoStr.charAt(0);
-     * 
-     * String correo = Keyboard.readString("Correo electrónico de contacto: ");
-     * 
-     * personas.add(new Persona(identificacion, nombreCompleto, year, month, day,
-     * sexo, correo));
-     * } while (true);
-     * 
-     * Utils.writeJSON(personas, "./data/personas.json");
-     * }
-     */
 
      private static void crearComposicion() throws Exception {
         ArrayList<ComposicionCorporal> composiciones = new ArrayList<>();
@@ -486,4 +456,137 @@ public class App {
             return personas.get(opcion - 1); // Retorna la persona seleccionada
         }
     }
+
+    private static void generarReportePorPeso() {
+    System.out.println("\n--- Generar Reporte por Peso ---");
+    
+    ClasiPesos clasificacion = Keyboard.readEnum(ClasiPesos.class, "Elija una clasificación de peso:");
+    String categoria = clasificacion.getValue();
+    
+    List<ComposicionCorporal> filtrados = new ArrayList<>();
+    
+    for (ComposicionCorporal c : composicion) {
+        if (c.clasificarGrasaCorporal().equalsIgnoreCase(categoria)) {
+            filtrados.add(c);
+        }
+    }
+    
+    if (filtrados.isEmpty()) {
+        System.out.println("No se encontraron personas con la clasificación seleccionada.");
+        return;
+    }
+    
+    List<ComposicionCorporal> mujeres = new ArrayList<>();
+    List<ComposicionCorporal> hombres = new ArrayList<>();
+    
+    for (ComposicionCorporal c : filtrados) {
+        if (c.getPersona().getSexo() == 'F') {
+            mujeres.add(c);
+        } else {
+            hombres.add(c);
+        }
+    }
+    
+    System.out.println("\nMujeres:");
+    double sumaPesoMujeres = 0;
+    for (ComposicionCorporal c : mujeres) {
+        System.out.printf("%s - Grasa Corporal: %.2f%%\n", c.getPersona().getNombreCompleto(), c.getGrasaCorporal());
+        sumaPesoMujeres += c.getPeso();
+    }
+    
+    System.out.println("\nHombres:");
+    double sumaPesoHombres = 0;
+    for (ComposicionCorporal c : hombres) {
+        System.out.printf("%s - Grasa Corporal: %.2f%%\n", c.getPersona().getNombreCompleto(), c.getGrasaCorporal());
+        sumaPesoHombres += c.getPeso();
+    }
+    
+    int totalMujeres = mujeres.size();
+    int totalHombres = hombres.size();
+    double promedioPesoMujeres = totalMujeres == 0 ? 0 : sumaPesoMujeres / totalMujeres;
+    double promedioPesoHombres = totalHombres == 0 ? 0 : sumaPesoHombres / totalHombres;
+    double promedioPesoGeneral = (sumaPesoMujeres + sumaPesoHombres) / (totalMujeres + totalHombres);
+    
+    System.out.println("\nResumen:");
+    System.out.println("Total mujeres: " + totalMujeres);
+    System.out.println("Total hombres: " + totalHombres);
+    System.out.printf("Promedio de peso mujeres: %.2f kg\n", promedioPesoMujeres);
+    System.out.printf("Promedio de peso hombres: %.2f kg\n", promedioPesoHombres);
+    System.out.printf("Promedio de peso general: %.2f kg\n", promedioPesoGeneral);
+}
+
+private static void reporteIMCExtremos() {
+    System.out.println("\n--- Reporte de IMC Extremos ---");
+    
+    ComposicionCorporal menor25Min = null, menor25Max = null;
+    ComposicionCorporal mayor40Min = null, mayor40Max = null;
+    
+    for (ComposicionCorporal c : composicion) {
+        int edad = c.getPersona().getEdadEstimada();
+        
+        if (edad < 25) {
+            if (menor25Min == null || c.getImc() < menor25Min.getImc()) {
+                menor25Min = c;
+            }
+            if (menor25Max == null || c.getImc() > menor25Max.getImc()) {
+                menor25Max = c;
+            }
+        } else if (edad > 40) {
+            if (mayor40Min == null || c.getImc() < mayor40Min.getImc()) {
+                mayor40Min = c;
+            }
+            if (mayor40Max == null || c.getImc() > mayor40Max.getImc()) {
+                mayor40Max = c;
+            }
+        }
+    }
+    
+    if (menor25Min != null) {
+        System.out.printf("\nMenor de 25 años con menor IMC: %s - IMC: %.2f\n",
+                menor25Min.getPersona().getNombreCompleto(), menor25Min.getImc());
+    }
+    if (menor25Max != null) {
+        System.out.printf("Menor de 25 años con mayor IMC: %s - IMC: %.2f\n",
+                menor25Max.getPersona().getNombreCompleto(), menor25Max.getImc());
+    }
+    if (mayor40Min != null) {
+        System.out.printf("\nMayor de 40 años con menor IMC: %s - IMC: %.2f\n",
+                mayor40Min.getPersona().getNombreCompleto(), mayor40Min.getImc());
+    }
+    if (mayor40Max != null) {
+        System.out.printf("Mayor de 40 años con mayor IMC: %s - IMC: %.2f\n",
+                mayor40Max.getPersona().getNombreCompleto(), mayor40Max.getImc());
+    }
+}
+private static void listarPersonasGrasaVisceralExcelente() {
+    System.out.println("\n--- Personas con Grasa Visceral Excelente (Último Registro) ---");
+    
+    Map<String, ComposicionCorporal> ultimoRegistro = new HashMap<>();
+    
+    for (ComposicionCorporal c : composicion) {
+        String idPersona = c.getPersona().getIdentificacion();
+        
+        if (!ultimoRegistro.containsKey(idPersona) || c.getFechaRegistro().isAfter(ultimoRegistro.get(idPersona).getFechaRegistro())) {
+            ultimoRegistro.put(idPersona, c);
+        }
+    }
+    
+    boolean hayResultados = false;
+    for (ComposicionCorporal c : ultimoRegistro.values()) {
+        if (c.getClasificarGrasaVisceral().equals("Excelente")) {
+            System.out.printf("%s - Grasa Visceral: %.2f (Excelente)\n", 
+                    c.getPersona().getNombreCompleto(), c.getGrasaVisceral());
+            hayResultados = true;
+        }
+    }
+    
+    if (!hayResultados) {
+        System.out.println("No se encontraron personas con grasa visceral excelente en su último registro.");
+    }
+}
+
+
+    
+
+   
 }

@@ -30,5 +30,36 @@
     "identificacion": "C0004",
     "sexo": "F",
     "nombreCompleto": "Geneviève Espoir Lefèvre Dubois"
+  },
+  {
+    "edadEstimada": 22,
+    "fechaNacimiento": "2003-03-04",
+    "correo": "All@redfactory.com",
+    "identificacion": "C0005",
+    "sexo": "F",
+    "nombreCompleto": "Alessandra Pulencio"
+  },{
+    "edadEstimada": 45,
+    "fechaNacimiento": "1979-09-12",
+    "correo": "johndoe@example.com",
+    "identificacion": "C0006",
+    "sexo": "M",
+    "nombreCompleto": "Johnathan Marcus Doe"
+  },
+  {
+    "edadEstimada": 20,
+    "fechaNacimiento": "2004-07-15",
+    "correo": "lucia.morales@example.com",
+    "identificacion": "C0007",
+    "sexo": "F",
+    "nombreCompleto": "Lucía Morales García"
+  },
+  {
+    "edadEstimada": 19,
+    "fechaNacimiento": "2005-11-22",
+    "correo": "daniel.torres@example.com",
+    "identificacion": "C0008",
+    "sexo": "M",
+    "nombreCompleto": "Daniel Torres Ramírez"
   }
 ]

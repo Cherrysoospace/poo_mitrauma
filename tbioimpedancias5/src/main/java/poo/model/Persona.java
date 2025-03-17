@@ -3,9 +3,12 @@ package poo.model;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.Period;
-
+import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONObject;
+
+import poo.helpers.Keyboard;
 
 public class Persona {
     private String identificacion;
@@ -14,11 +17,11 @@ public class Persona {
     private char sexo;
     private String correo;
 
-     // Constructor con valores por defecto
-     public Persona() {
+    // Constructor con valores por defecto
+    public Persona() {
         this.identificacion = "00000";
         this.nombreCompleto = "NN";
-        this.fechaNacimiento = LocalDate.of(2000, 1, 1);
+        this.fechaNacimiento = LocalDate.now();
         this.sexo = 'M';
         this.correo = "default@email.com";
     }
@@ -27,7 +30,7 @@ public class Persona {
     public Persona(String identificacion, String nombreCompleto, LocalDate fechaNacimiento, char sexo, String correo) {
         this.identificacion = identificacion != null ? identificacion : "00000";
         this.nombreCompleto = nombreCompleto != null ? nombreCompleto : "Nombre Predeterminado";
-        this.fechaNacimiento = fechaNacimiento != null ? fechaNacimiento : LocalDate.of(2000, 1, 1);
+        this.fechaNacimiento = fechaNacimiento != null ? fechaNacimiento : LocalDate.now();
         this.sexo = (sexo == 'M' || sexo == 'F') ? sexo : 'M';
         this.correo = (correo != null && correo.contains("@")) ? correo : "default@email.com";
     }
@@ -35,17 +38,17 @@ public class Persona {
     // Constructor desde JSON
     public Persona(JSONObject json) {
         this(
-            json.optString("identificacion", "00000"),
-            json.optString("nombreCompleto", "Nombre Predeterminado"),
-            json.has("fechaNacimiento") ? LocalDate.parse(json.getString("fechaNacimiento")) : LocalDate.of(2000, 1, 1),
-            json.has("sexo") ? json.getString("sexo").charAt(0) : 'M',
-            json.optString("correo", "default@email.com")
-        );
+                json.optString("identificacion", "00000"),
+                json.optString("nombreCompleto", "Nombre Predeterminado"),
+                json.has("fechaNacimiento") ? LocalDate.parse(json.getString("fechaNacimiento"))
+                        : LocalDate.of(2000, 1, 1),
+                json.has("sexo") ? json.getString("sexo").charAt(0) : 'M',
+                json.optString("correo", "default@email.com"));
     }
-    
-    public Persona (String identificaion) {
-       this();
-       setIdentificacion(identificaion);
+
+    public Persona(String identificaion) {
+        this();
+        setIdentificacion(identificaion);
     }
 
     public String getIdentificacion() {
@@ -123,8 +126,12 @@ public class Persona {
                 identificacion, nombreCompleto, fechaNacimiento, getEdadEstimada(),
                 (sexo == 'M' ? "Masculino" : "Femenino"), correo);
     }
+
     @Override
-    public boolean equals (Object obj) {
+    public boolean equals(Object obj) {
+        // si obj es null, retorna falso
+        // si el tipo de datos != Persona, retorna falso
+        // si
 
         if (this == obj) {
             return true;
@@ -138,12 +145,13 @@ public class Persona {
             return false;
         }
         Persona p = (Persona) obj;
-      
+
         return this.identificacion.equals(p.identificacion);
     }
 
     public String toStringDetallado() {
-        return String.format("\nIdentificación: %s\nNombre: %s\nFecha de nacimiento: %s\nEdad: %d años\nSexo: %s\nCorreo: %s\n",
+        return String.format(
+                "\nIdentificación: %s\nNombre: %s\nFecha de nacimiento: %s\nEdad: %d años\nSexo: %s\nCorreo: %s\n",
                 identificacion, nombreCompleto, fechaNacimiento, getEdadEstimada(),
                 (sexo == 'M' ? "Masculino" : "Femenino"), correo);
     }

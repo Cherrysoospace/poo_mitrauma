@@ -68,13 +68,13 @@ public class ComposicionCorporal {
         json.put("estatura", estatura);
         json.put("masaMuscular", masaMuscular);
         json.put("grasaVisceral", grasaVisceral);
-        json.put("clasificacionGrasaVisceral", clasificarGrasaVisceral()); // ✅ Agregado
+        json.put("clasificacionGrasaVisceral", getClasificarGrasaVisceral()); // ✅ Agregado
         json.put("grasaCorporal", grasaCorporal);
         json.put("aguaCorporal", aguaCorporal);
         json.put("proteinas", proteinas);
         json.put("masaOsea", masaOsea);
         json.put("imc", imc);
-        json.put("clasificacionIMC", clasificarImc()); // ✅ Agregado
+        json.put("clasificacionIMC", getClasificarImc()); // ✅ Agregado
         return json;
     }
 
@@ -166,17 +166,18 @@ public class ComposicionCorporal {
         return imc;
     }
 
-    public String clasificarImc() {
+    public String getClasificarImc() {
         if (imc < 18.5) {
-            return "Bajo peso";
+            return ClasiPesos.PESODEMASIADOBAJO.getValue();
         } else if (imc < 25) {
-            return "Normal";
+            return ClasiPesos.PESOSALUDABLE.getValue();
         } else if (imc < 30) {
-            return "Sobrepeso";
+            return ClasiPesos.SOBREPESO.getValue();
         } else {
-            return "Obesidad";
+            return ClasiPesos.OBESIDAD.getValue();
         }
     }
+    
 
     public double getMasaMuscular () {
         return masaMuscular;
@@ -251,7 +252,7 @@ public class ComposicionCorporal {
         return grasaVisceral;
     }
 
-    public String clasificarGrasaVisceral() {
+    public String getClasificarGrasaVisceral() {
         if (grasaVisceral <= 5) {
             return "Excelente";
         } else if (grasaVisceral <= 10) {
@@ -406,8 +407,8 @@ public int hashCode() {
     public String toString() {
         return "\nFecha de Registro: " + fechaRegistro +
                "\nMasa Muscular (%): " + masaMuscular + " - " + clasificarMasaMuscular() +
-               "\nIMC: " + getImc() + " - " + clasificarImc() +
-               "\nGrasa Visceral: " + grasaVisceral + " - " + clasificarGrasaVisceral() +
+               "\nIMC: " + getImc() + " - " + getClasificarImc() +
+               "\nGrasa Visceral: " + grasaVisceral + " - " + getClasificarGrasaVisceral() +
                "\nGrasa Corporal (%): " + grasaCorporal + " - " + clasificarGrasaCorporal() +
                "\nAgua Corporal (%): " + aguaCorporal +
                "\nProteínas (%): " + proteinas + " - " + clasificarProteinas() +
