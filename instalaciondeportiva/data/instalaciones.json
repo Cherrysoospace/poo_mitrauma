@@ -1,0 +1,22 @@
+[
+  {
+    "area": 336,
+    "descripcion": "ncnfjnkdnkdn ksnkdnkdnd endnkd ndknd",
+    "tipo": "Piscina",
+    "piscinaOlimpica": false,
+    "numId": "P0001",
+    "dimensionAn": 24,
+    "dimensionLar": 14,
+    "precioHora": 15000
+  },
+  {
+    "area": 408,
+    "descripcion": "nsndjd njdndk kndkndkd ndndkn ndndk jnd",
+    "tipo": "CanchaTennis",
+    "numId": "CT001",
+    "dimensionAn": 12,
+    "dimensionLar": 34,
+    "precioHora": 7000,
+    "tipoCancha": "CESPED"
+  }
+]

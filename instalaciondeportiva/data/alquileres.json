@@ -1,0 +1,12 @@
+[{
+  "socio": {
+    "direccion": "Cra. 8 #24-05",
+    "id": "S0003",
+    "telefono": "3124257809",
+    "nombre": "Sergio Pérez"
+  },
+  "instalacion": {"numId": "CT001"},
+  "fechaHoraInicio": "2025-03-31T07:00",
+  "id": "A0001",
+  "fechaHoraFin": "2025-03-31T09:00"
+}]
