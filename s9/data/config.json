@@ -1,0 +1,14 @@
+{
+    "tarifas" : {
+        "canchaMultiproposito": 5000,
+        "canchaTennis" : 7000,
+        "piscina": 15000
+    },
+    "archivos": {
+        "socios": "./data/socios.json",
+        "canchaMultiproposito": "./data/canchas-multiproposito.json",
+        "canchaTennis": "./data/canchatennis.json",
+        "piscina": "./data/piscinas.json",
+        "alquileres": "./data/alquileres.json"
+    }
+}

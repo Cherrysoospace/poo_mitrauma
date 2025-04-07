@@ -1,0 +1,50 @@
+[
+  {
+    "direccion": "cra. 25 #1-22",
+    "id": "S0011",
+    "telefono": "3043557891",
+    "nombre": "Jay Oak"
+  },
+  {
+    "direccion": "Cra. 25 #14-02",
+    "id": "S0009",
+    "telefono": "3104567892",
+    "nombre": "Ray Jack"
+  },
+  {
+    "direccion": "Cll. 12 #9-11",
+    "id": "S0007",
+    "telefono": "3045678340",
+    "nombre": "Sophia Rutherford"
+  },
+  {
+    "direccion": "Calle 72 #10-15, Bogotá D.C.",
+    "id": "S0020",
+    "telefono": "310 456 7890",
+    "nombre": "Laura Rodríguez"
+  },
+  {
+    "direccion": "Carrera 45 #30-22, Medellín, Antioquia",
+    "id": "S0021",
+    "telefono": "312 987 6543",
+    "nombre": "Andrés Pérez"
+  },
+  {
+    "direccion": "Calle 15 #8-40, Cali, Valle del Cauca",
+    "id": "S0022",
+    "telefono": "311 223 3445",
+    "nombre": "Catalina Morales"
+  },
+  {
+    "direccion": "Carrera 11 #65-32, Bucaramanga, Santander",
+    "id": "S0023",
+    "telefono": "300 112 2334",
+    "nombre": "Juan Camilo Rincón"
+  },
+  {
+    "direccion": "Calle 40 #18-90, Barranquilla, Atlántico",
+    "id": "S0024",
+    "telefono": "316 334 5567",
+    "nombre": "Daniela López"
+  }
+]
