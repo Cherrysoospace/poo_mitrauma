@@ -1,0 +1,79 @@
+[
+  {
+    "area": 7.3500000000000005,
+    "descripcion": "dndhjd ndndk ndkndkdn kndkd",
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 2.1,
+    "strGraderia": "con gradería",
+    "largo": 3.5,
+    "valorHora": 5000,
+    "id": "A2V36"
+  },
+  {
+    "area": 800,
+    "descripcion": "Cancha techada para fútbol sala y baloncesto",
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 20,
+    "strGraderia": "con gradería",
+    "largo": 40,
+    "valorHora": 5000,
+    "id": "4BJNI"
+  },
+  {
+    "area": 648,
+    "descripcion": "Cancha comunitaria para voleibol y eventos recreativos",
+    "graderia": false,
+    "tipoInstalacion": "Cancha multipróposito: sin graderia",
+    "ancho": 18,
+    "strGraderia": "sin graderia",
+    "largo": 36,
+    "valorHora": 5000,
+    "id": "T40M5"
+  },
+  {
+    "area": 968,
+    "descripcion": "Cancha profesional para torneos múltiples, techada",
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 22,
+    "strGraderia": "con gradería",
+    "largo": 44,
+    "valorHora": 5000,
+    "id": "UI8KY"
+  },
+  {
+    "area": 512,
+    "descripcion": "Cancha escolar de uso mixto al aire libre",
+    "graderia": false,
+    "tipoInstalacion": "Cancha multipróposito: sin graderia",
+    "ancho": 16,
+    "strGraderia": "sin graderia",
+    "largo": 32,
+    "valorHora": 5000,
+    "id": "VJ4CW"
+  },
+  {
+    "area": 760,
+    "descripcion": "Cancha para eventos deportivos y culturales del barrio",
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 20,
+    "strGraderia": "con gradería",
+    "largo": 38,
+    "valorHora": 5000,
+    "id": "1GE20"
+  },
+  {
+    "area": 7.3500000000000005,
+    "descripcion": "dndhjd ndndk ndkndkdn kndkd",
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 2.1,
+    "strGraderia": "con gradería",
+    "largo": 3.5,
+    "valorHora": 5000,
+    "id": "AS436"
+  }
+]

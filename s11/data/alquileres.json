@@ -1,0 +1,49 @@
+[
+  {
+    "horas": 2,
+    "instalacionDeportiva": {
+      "area": 7.68,
+      "descripcion": "jejn dnkdnd ndknd nkd kndkd ",
+      "tipoInstalacion": "Tipo: Cancha de tenis en césped",
+      "ancho": 2.4,
+      "largo": 3.2,
+      "valorHora": 7000,
+      "id": "IOHH4",
+      "tipoCancha": "CESPED"
+    },
+    "socio": {
+      "direccion": "Cra. 25 #14-02",
+      "id": "S0009",
+      "telefono": "3104567892",
+      "nombre": "Ray Jack"
+    },
+    "valorAlquiler": 14000,
+    "fechaHoraInicio": "2025-03-01T11:00",
+    "id": "JL0J0",
+    "fechaHoraFin": "2025-03-01T13:00"
+  },
+  {
+    "horas": 2,
+    "instalacionDeportiva": {
+      "area": 4.5,
+      "descripcion": "ndjnd  ndkdn djnkd jnd",
+      "tipoInstalacion": "Pisicina Olímpica",
+      "ancho": 1.8,
+      "strGraderia": "Es olímpica",
+      "largo": 2.5,
+      "valorHora": 15000,
+      "id": "Y1O42",
+      "olimpica": true
+    },
+    "socio": {
+      "direccion": "cra. 25 #1-22",
+      "id": "S0011",
+      "telefono": "3043557891",
+      "nombre": "Jay Oak"
+    },
+    "valorAlquiler": 30000,
+    "fechaHoraInicio": "2025-04-01T13:00",
+    "id": "SAVA0",
+    "fechaHoraFin": "2025-04-01T15:00"
+  }
+]
