@@ -83,4 +83,19 @@ public class CanchaTennis extends InstalacionDeportiva {
     
         return datos.getDouble("electricidad") + mantenimiento;
     }  
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+    
+        CanchaTennis ct = (CanchaTennis) obj;
+    
+        // Validar null antes de comparar
+        if (this.id == null || ct.id == null) return false;
+        
+        return this.id.equals(ct.id);
+    }
 }

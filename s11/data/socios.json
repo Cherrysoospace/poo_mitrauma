@@ -12,12 +12,6 @@
     "nombre": "Ray Jack"
   },
   {
-    "direccion": "Cll. 12 #9-11",
-    "id": "S0007",
-    "telefono": "3045678340",
-    "nombre": "Sophia Rutherford"
-  },
-  {
     "direccion": "Calle 72 #10-15, Bogotá D.C.",
     "id": "S0020",
     "telefono": "310 456 7890",
@@ -50,6 +44,12 @@
   {
     "direccion": "Cra 9 #45-67",
     "id": "ABC11",
+    "telefono": "3007896541",
+    "nombre": "Laura Mejía"
+  },
+  {
+    "direccion": "Cra 9 #45-67",
+    "id": "ABC22",
     "telefono": "3007896541",
     "nombre": "Laura Mejía"
   }

@@ -130,7 +130,7 @@ public class SocioService implements Service<Socio> {
         JSONObject json = new JSONObject(strJson);
 
         if (!json.has("id") || json.getString("id").isBlank()) {
-            json.put("id", Utils.getRandomKey(12));
+            json.put("id", Utils.getRandomKey(5));
         }
 
         Socio c = new Socio(

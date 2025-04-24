@@ -50,16 +50,6 @@
     "tipoCancha": "OTRO"
   },
   {
-    "descripcion": "Cancha de competición con césped artificial",
-    "area": 264,
-    "tipoInstalacion": "Tipo: Cancha de tenis en césped",
-    "ancho": 11,
-    "valorHora": 7000,
-    "largo": 24,
-    "id": "2YT46",
-    "tipoCancha": "CESPED"
-  },
-  {
     "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "area": 268.275,
     "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
@@ -70,13 +60,13 @@
     "tipoCancha": "LADRILLO"
   },
   {
-    "descripcion": "jejn dnkdnd ndknd nkd kndkd ",
-    "area": 7.68,
-    "tipoInstalacion": "Tipo: Cancha de tenis en césped",
-    "ancho": 2.4,
+    "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+    "area": 15.299999999999999,
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 3.4,
     "valorHora": 7000,
-    "largo": 3.2,
-    "id": "IOHR4",
-    "tipoCancha": "CESPED"
+    "largo": 4.5,
+    "id": "MONZA",
+    "tipoCancha": "LADRILLO"
   }
 ]

@@ -88,5 +88,19 @@ public class CanchaMultiproposito extends InstalacionDeportiva {
         return valorHora * porcentaje;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+    
+        CanchaMultiproposito cm = (CanchaMultiproposito) obj;
+    
+        // Validar null antes de comparar
+        if (this.id == null || cm.id == null) return false;
+        
+        return this.id.equals(cm.id);
+    }
     
 }

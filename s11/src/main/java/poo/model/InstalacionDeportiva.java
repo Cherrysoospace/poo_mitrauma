@@ -39,6 +39,7 @@ public abstract class InstalacionDeportiva {
     // CONSTRUCTOR POR ID
     public InstalacionDeportiva(String id) { 
         this.id = id;
+        this.descripcion = descripcion;
     }
 
 
@@ -195,8 +196,6 @@ public abstract class InstalacionDeportiva {
         }
         InstalacionDeportiva i = (InstalacionDeportiva) obj;
 
-        //ES CON O O CON Y?
-
-        return this.id.equals(i.id)&& this.descripcion.equals(i.descripcion);
+        return this.id.equals(i.id) && this.descripcion.equals(i.descripcion);
     }
 }

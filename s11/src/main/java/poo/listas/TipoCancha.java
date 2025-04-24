@@ -5,7 +5,9 @@ import org.json.JSONObject;
 
 public enum TipoCancha {
 
-    LADRILLO("Cancha de tenis en ladrillo"), CESPED("Cancha de tenis en césped"), OTRO("Otros tipos de superficie");
+    LADRILLO("Cancha de tenis en ladrillo"), 
+    CESPED("Cancha de tenis en césped"), 
+    OTRO("Otros tipos de superficie");
 
     private final String value;
 

@@ -74,13 +74,28 @@ public class Piscina extends InstalacionDeportiva {
     public double getCostoFuncionamiento(JSONObject config) {
         JSONObject datos = config.getJSONObject("costoFuncionamiento").getJSONObject("piscina");
         double costo = datos.getDouble("quimico") +
-                       datos.getDouble("electricidad") +
-                       datos.getDouble("agua") +
-                       datos.getDouble("limpiezaMantenimiento");
-    
+                datos.getDouble("electricidad") +
+                datos.getDouble("agua") +
+                datos.getDouble("limpiezaMantenimiento");
+
         if (olimpica) {
             costo += costo * datos.getDouble("Olimpica");
         }
         return costo;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+    
+        Piscina p = (Piscina) obj;
+    
+        // Validar null antes de comparar
+        if (this.id == null || p.id == null) return false;
+        
+        return this.id.equals(p.id);
     }
 }

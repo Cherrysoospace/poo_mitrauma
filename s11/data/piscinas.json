@@ -57,12 +57,12 @@
   {
     "descripcion": "ndjnd  ndkdn djnkd jnd",
     "area": 4.5,
-    "tipoInstalacion": "Pisicina Olímpica",
+    "tipoInstalacion": "Piscina no Olímpica",
     "ancho": 1.8,
-    "strGraderia": "Es olímpica",
+    "strGraderia": "No es olímpica",
     "valorHora": 15000,
     "largo": 2.5,
     "id": "Y1T72",
-    "olimpica": true
+    "olimpica": false
   }
 ]

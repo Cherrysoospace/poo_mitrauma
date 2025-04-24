@@ -2,36 +2,13 @@
   {
     "horas": 2,
     "instalacionDeportiva": {
-      "area": 7.68,
-      "descripcion": "jejn dnkdnd ndknd nkd kndkd ",
-      "tipoInstalacion": "Tipo: Cancha de tenis en césped",
-      "ancho": 2.4,
-      "largo": 3.2,
-      "valorHora": 7000,
-      "id": "IOHH4",
-      "tipoCancha": "CESPED"
-    },
-    "socio": {
-      "direccion": "Cra. 25 #14-02",
-      "id": "S0009",
-      "telefono": "3104567892",
-      "nombre": "Ray Jack"
-    },
-    "valorAlquiler": 14000,
-    "fechaHoraInicio": "2025-03-01T11:00",
-    "id": "JL0J0",
-    "fechaHoraFin": "2025-03-01T13:00"
-  },
-  {
-    "horas": 2,
-    "instalacionDeportiva": {
-      "area": 4.5,
       "descripcion": "ndjnd  ndkdn djnkd jnd",
+      "area": 4.5,
       "tipoInstalacion": "Pisicina Olímpica",
       "ancho": 1.8,
       "strGraderia": "Es olímpica",
-      "largo": 2.5,
       "valorHora": 15000,
+      "largo": 2.5,
       "id": "Y1O42",
       "olimpica": true
     },
@@ -45,5 +22,53 @@
     "fechaHoraInicio": "2025-04-01T13:00",
     "id": "SAVA0",
     "fechaHoraFin": "2025-04-01T15:00"
+  },
+  {
+    "horas": 2,
+    "instalacionDeportiva": {
+      "descripcion": "Cancha Multipróposito con temática de F1 Campeonato de 2005",
+      "area": 7.3500000000000005,
+      "graderia": true,
+      "tipoInstalacion": "Cancha multipróposito: con gradería",
+      "ancho": 2.1,
+      "strGraderia": "con gradería",
+      "valorHora": 5000,
+      "largo": 3.5,
+      "id": "R25FA"
+    },
+    "socio": {
+      "direccion": "Cra. 25 #14-02",
+      "id": "S0009",
+      "telefono": "3104567892",
+      "nombre": "Ray Jack"
+    },
+    "valorAlquiler": 10000,
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "id": "JL0J0",
+    "fechaHoraFin": "2025-04-01T14:00"
+  },
+  {
+    "horas": 3,
+    "instalacionDeportiva": {
+      "descripcion": "Piscina semiolímpica para entrenamiento general",
+      "area": 450,
+      "tipoInstalacion": "Pisicina Olímpica",
+      "ancho": 15,
+      "strGraderia": "Es olímpica",
+      "valorHora": 15000,
+      "largo": 30,
+      "id": "OUDGD",
+      "olimpica": true
+    },
+    "socio": {
+      "direccion": "Carrera 45 #30-22, Medellín, Antioquia",
+      "id": "S0021",
+      "telefono": "312 987 6543",
+      "nombre": "Andrés Pérez"
+    },
+    "valorAlquiler": 45000,
+    "fechaHoraInicio": "2025-04-12T14:00",
+    "id": "FREAK",
+    "fechaHoraFin": "2025-04-12T17:00"
   }
 ]
