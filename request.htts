@@ -1,0 +1,38 @@
+// Ver https://www.youtube.com/watch?v=3QLcHjNp-08 para más información
+
+@url = http://localhost:7070
+
+### prueba inicial
+
+GET {{url}}
+
+###
+GET {{url}}/socio
+
+### listar un socio según su índice
+GET {{url}}/socio/indice/1
+
+### listar un socio según su ID
+GET {{url}}/socio/id/7XB9RH2LY13G
+
+### agregar un cliente
+POST {{url}}/socio
+Content-Type: application/json; charset=utf-8
+
+{
+    "nombre": "Alejandra López Pumarejo",
+    "direccion": "Calle 21 #40-34",
+    "telefono": "3219879999"
+}
+
+### actualizar un socio
+PATCH {{url}}/socio/7XB9RH2LY13G
+Content-Type: application/json; charset=utf-8
+
+{
+    "nombre": "Alejandra López Camargo",
+    "direccion": "Calle 12 #40-34"
+}
+
+### Eliminar un socio dado su ID
+DELETE {{url}}/socio/7XB9RH2LY13G
