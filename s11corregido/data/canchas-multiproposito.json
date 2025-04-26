@@ -1,0 +1,79 @@
+[
+  {
+    "descripcion": "Cancha Multipropósito inspirada en F1 Campeonato 1994",
+    "area": 7.3500000000000005,
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 2.1,
+    "strGraderia": "con gradería",
+    "valorHora": 5000,
+    "largo": 3.5,
+    "id": "A2V36"
+  },
+  {
+    "descripcion": "Cancha techada para fútbol sala y baloncesto",
+    "area": 800,
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 20,
+    "strGraderia": "con gradería",
+    "valorHora": 5000,
+    "largo": 40,
+    "id": "4BJNI"
+  },
+  {
+    "descripcion": "Cancha comunitaria para voleibol y eventos recreativos",
+    "area": 648,
+    "graderia": false,
+    "tipoInstalacion": "Cancha multipróposito: sin graderia",
+    "ancho": 18,
+    "strGraderia": "sin graderia",
+    "valorHora": 5000,
+    "largo": 36,
+    "id": "T40M5"
+  },
+  {
+    "descripcion": "Cancha profesional para torneos múltiples, techada",
+    "area": 968,
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 22,
+    "strGraderia": "con gradería",
+    "valorHora": 5000,
+    "largo": 44,
+    "id": "UI8KY"
+  },
+  {
+    "descripcion": "Cancha escolar de uso mixto al aire libre",
+    "area": 512,
+    "graderia": false,
+    "tipoInstalacion": "Cancha multipróposito: sin graderia",
+    "ancho": 16,
+    "strGraderia": "sin graderia",
+    "valorHora": 5000,
+    "largo": 32,
+    "id": "VJ4CW"
+  },
+  {
+    "descripcion": "Cancha para eventos deportivos y culturales del barrio",
+    "area": 760,
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 20,
+    "strGraderia": "con gradería",
+    "valorHora": 5000,
+    "largo": 38,
+    "id": "1GE20"
+  },
+  {
+    "descripcion": "Cancha Multipróposito con temática de F1 Campeonato de 2005",
+    "area": 7.3500000000000005,
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 2.1,
+    "strGraderia": "con gradería",
+    "valorHora": 5000,
+    "largo": 3.5,
+    "id": "R25FA"
+  }
+]

@@ -1,0 +1,36 @@
+{
+    "tarifas" : {
+        "canchaMultiproposito": 5000,
+        "canchaTennis" : 7000,
+        "piscina": 15000
+    },
+    "archivos": {
+        "socios": "./data/socios.json",
+        "canchaMultiproposito": "./data/canchas-multiproposito.json",
+        "canchaTennis": "./data/canchatennis.json",
+        "piscina": "./data/piscinas.json",
+        "alquileres": "./data/alquileres.json"
+    },
+    "costoFuncionamiento": 
+       { "piscina" : {
+            "quimico": 500,
+            "electricidad": 2000,
+            "agua":700,
+            "limpiezaMantenimiento": 400,
+            "Olimpica": 0.05,
+            "noOlimpica": 0
+        },
+        "canchaTennis":{
+            "electricidad": 1000,
+            "mantenimientoLadrillo": 450,
+            "mantenimientoCesped": 500,
+            "mantenimientoOtros": 0
+        },
+        "canchaMultiproposito": {
+            "porcentaje": {
+                "sinGraderia": 0.4,
+                "conGraderia": 0.6
+            }
+        }
+    }
+}

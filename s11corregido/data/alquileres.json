@@ -1,0 +1,50 @@
+[
+  {
+    "horas": 2,
+    "instalacionDeportiva": {
+      "descripcion": "Cancha Multipróposito con temática de F1 Campeonato de 2005",
+      "area": 7.3500000000000005,
+      "graderia": true,
+      "tipoInstalacion": "Cancha multipróposito: con gradería",
+      "ancho": 2.1,
+      "strGraderia": "con gradería",
+      "valorHora": 5000,
+      "largo": 3.5,
+      "id": "R25FA"
+    },
+    "socio": {
+      "direccion": "Cra. 25 #14-02",
+      "id": "S0009",
+      "telefono": "3104567892",
+      "nombre": "Ray Jack"
+    },
+    "valorAlquiler": 10000,
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "id": "JL0J0",
+    "fechaHoraFin": "2025-04-01T14:00"
+  },
+  {
+    "horas": 4,
+    "instalacionDeportiva": {
+      "descripcion": "Piscina semiolímpica para entrenamiento general",
+      "area": 450,
+      "tipoInstalacion": "Pisicina Olímpica",
+      "ancho": 15,
+      "strGraderia": "Es olímpica",
+      "valorHora": 15000,
+      "largo": 30,
+      "id": "OUDGD",
+      "olimpica": true
+    },
+    "socio": {
+      "direccion": "Carrera 45 #30-22, Medellín, Antioquia",
+      "id": "S0021",
+      "telefono": "312 987 6543",
+      "nombre": "Andrés Pérez"
+    },
+    "valorAlquiler": 60000,
+    "fechaHoraInicio": "2025-04-12T13:00",
+    "id": "FREAK",
+    "fechaHoraFin": "2025-04-12T17:00"
+  }
+]

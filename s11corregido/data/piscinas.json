@@ -1,0 +1,68 @@
+[
+  {
+    "descripcion": "ndjnd  ndkdn djnkd jnd",
+    "area": 4.5,
+    "tipoInstalacion": "Pisicina Olímpica",
+    "ancho": 1.8,
+    "strGraderia": "Es olímpica",
+    "valorHora": 15000,
+    "largo": 2.5,
+    "id": "Y1O42",
+    "olimpica": true
+  },
+  {
+    "descripcion": "Piscina olímpica cubierta con 10 carriles",
+    "area": 1250,
+    "tipoInstalacion": "Pisicina Olímpica",
+    "ancho": 25,
+    "strGraderia": "Es olímpica",
+    "valorHora": 15000,
+    "largo": 50,
+    "id": "MG59F",
+    "olimpica": true
+  },
+  {
+    "descripcion": "Piscina semiolímpica para entrenamiento general",
+    "area": 200,
+    "tipoInstalacion": "Piscina no Olímpica",
+    "ancho": 10,
+    "strGraderia": "No es olímpica",
+    "valorHora": 15000,
+    "largo": 20,
+    "id": "4X4L0",
+    "olimpica": false
+  },
+  {
+    "descripcion": "Piscina semiolímpica para entrenamiento general",
+    "area": 450,
+    "tipoInstalacion": "Pisicina Olímpica",
+    "ancho": 15,
+    "strGraderia": "Es olímpica",
+    "valorHora": 15000,
+    "largo": 30,
+    "id": "OUDGD",
+    "olimpica": true
+  },
+  {
+    "descripcion": "Piscina pequeña para clases de natación infantil",
+    "area": 128,
+    "tipoInstalacion": "Piscina no Olímpica",
+    "ancho": 8,
+    "strGraderia": "No es olímpica",
+    "valorHora": 15000,
+    "largo": 16,
+    "id": "XZUPE",
+    "olimpica": false
+  },
+  {
+    "descripcion": "ndjnd  ndkdn djnkd jnd",
+    "area": 4.5,
+    "tipoInstalacion": "Piscina no Olímpica",
+    "ancho": 1.8,
+    "strGraderia": "No es olímpica",
+    "valorHora": 15000,
+    "largo": 2.5,
+    "id": "Y1T72",
+    "olimpica": false
+  }
+]
