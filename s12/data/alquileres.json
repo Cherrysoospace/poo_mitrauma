@@ -1,0 +1,23 @@
+[{
+  "horas": 2,
+  "instalacionDeportiva": {
+    "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+    "area": 15.299999999999999,
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 3.4,
+    "valorHora": 7000,
+    "largo": 4.5,
+    "id": "MONZA",
+    "tipoCancha": "LADRILLO"
+  },
+  "socio": {
+    "direccion": "Calle 21 #11-03, Buga, Valle del Cuaca",
+    "id": "PQQD6",
+    "telefono": "315 445 6783",
+    "nombre": "Jaime Alberto Rodríguez"
+  },
+  "valorAlquiler": 14000,
+  "fechaHoraInicio": "2025-04-01T12:00",
+  "id": "ZX1V2",
+  "fechaHoraFin": "2025-04-01T14:00"
+}]

@@ -1,0 +1,205 @@
+###
+@url = http://localhost:7070
+
+### PRUEBAS GET ALL ----------->
+### TODAS LAS INSTALACIONES UNIFICADAS
+GET {{url}}/canchas/todas
+
+### PRUEBA GET ALL SOCIO
+GET {{url}}/socio 
+
+### PRUEBA GET ALL PISCINA
+GET {{url}}/piscina
+
+### PRUEBA GET ALL CANCHA TENNIS
+GET {{url}}/canchatennis
+
+### TAMBIEN GET PARA TIPOS DE CANCHAS TENNIS
+GET {{url}}/canchas/tipos
+
+### PRUEBA GET ALL CANCHA MULTIPROPOSITO
+GET {{url}}/canchamultiproposito
+
+### PRUEBA GET ALL ALQUILER
+GET {{url}}/alquiler
+
+
+### PRUEBAS GET CON INDICE -------------------------->
+### PRUEBA PARA SOCIO (CONTEO INICIA A PARTIR DE 0)
+GET {{url}}/socio/indice/1
+
+### PRUEBA PARA PISCINA
+GET {{url}}/piscina/indice/3
+
+### PRUEBA PARA CANCHA TENNIS
+GET {{url}}/canchatennis/indice/4
+
+### PRUEBA PARA CANCHA MULTIPROPOSITO
+GET {{url}}/canchamultiproposito/indice/5
+
+### PRUEBA PARA ALQUILER
+GET {{url}}/alquiler/indice/0
+
+
+### PRUEBAS CON GET ITEM ------------------------------------>
+### PRUEBA PARA SOCIO (SE HACE SIN EL /id... porque genera error)
+GET {{url}}/socio/id/S0020
+
+### PRUEBA PARA PISCINA
+GET {{url}}/piscina/id/LRDTT
+
+### PRUEBA PARA CANCHA MULTIPROPOSITO
+GET {{url}}/canchamultiproposito/id/T40M5
+
+### PRUEBA PARA CANCHA TENNIS
+GET {{url}}/canchatennis/id/AFT45
+
+### PRUEBA PARA ALQUILER
+GET {{url}}/alquiler/id/ZX1V2
+
+### PRUEBAS DE CONTEO -------------------->
+### SOCIO-'.
+GET {{url}}/socio/conteo 
+
+### PISCINA
+GET {{url}}/piscina/conteo 
+
+### CANCHA TENNIS
+GET {{url}}/canchatennis/conteo
+
+### CANCHA MULTIPROPOSITO
+GET {{url}}/canchamultiproposito/conteo
+
+### ALQUILERES
+GET {{url}}/alquiler/conteo
+
+
+### PRUEBAS POST ------------------------------->
+#PRUEBAS POST PARA SOCIO SIN ID
+POST {{url}}/socio
+Content-Type: application/json; charset=utf-8
+
+{
+    "direccion": "Calle 21 #11-03, Buga, Valle del Cuaca",
+    "telefono": "315 445 6783",
+    "nombre": "Jaime Alberto Rodríguez"
+}
+
+### PRUEBAS POST INSTALACION PISCINA SIN VALOR HORA E ID
+POST {{url}}/piscina
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Piscina no olímpica para entrenamiento general",
+    "ancho": 10,
+    "largo": 12,
+    "olimpica": true
+}
+
+### PRUEBAS POST INSTALACION CANCHA TENNIS SIN VALOR HORA E ID
+POST {{url}}/canchatennis
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Cancha Tennis con superficie de ladrillo, perfecta para entrenamientos de corta duración.",
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 2.5,
+    "largo": 4.5,
+    "tipoCancha": "LADRILLO"
+}
+
+### PRUEBAS POST INSTALACION CANCHA MULTITPROPOSITO SIN VALOR HORA E ID
+POST {{url}}/canchamultiproposito
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Cancha Multipropósito inspirada en el Monaco GP en el Campeonato F1 1984 ",
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 2,
+    "largo": 3.1
+}
+
+
+### PRUEBAS POST PARA ALQUILER
+POST {{url}}/alquiler
+Content-Type: application/json; charset=utf-8
+
+{
+    "instalacionDeportiva": {
+    "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+    "area": 15.299999999999999,
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 3.4,
+    "valorHora": 7000,
+    "largo": 4.5,
+    "id": "MONZA",
+    "tipoCancha": "LADRILLO"
+    },
+    "socio": {
+    "direccion": "Calle 21 #11-03, Buga, Valle del Cuaca",
+    "id": "PQQD6",
+    "telefono": "315 445 6783",
+    "nombre": "Jaime Alberto Rodríguez"
+  },
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "fechaHoraFin": "2025-04-01T14:00"
+}
+
+### PRUEBA 2.0
+POST {{url}}/alquiler
+Content-Type: application/json; charset=utf-8
+
+{
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "fechaHoraFin": "2025-04-01T14:00",
+    "socio": "S0020",
+    "instalacionDeportiva": "VJ4CW"
+}
+
+
+### PRUEBAS PATCH ----------->
+
+### PRUEBAS DELETE ---------->
+##DELETE PARA SOCIO NO REFERENCIADO
+DELETE {{url}}/socio/00TTL
+
+### DELETE PARA PISCINA NO REFERENCIADA
+DELETE {{url}}/piscina/SET56
+
+### DELETE PARA CANCHA TENNIS NO REFERENCIADA
+DELETE {{url}}/canchatennis/5DZRA
+
+### DELETE PARA CANCHA MULTIPROPOSITO NO REFERENCIADA
+DELETE {{url}}/canchamultiproposito/1GE20
+
+###DELETE PARA ALQUILER
+DELETE {{url}}/alquiler/YDVQG
+
+
+### DELETE PARA REFERENCIADOS
+
+### PRUEBA DE CRUCE DE HORARIOS :d
+POST {{url}}/alquiler
+Content-Type: application/json; charset=utf-8
+
+{
+    "instalacionDeportiva": {
+    "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+    "area": 15.299999999999999,
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 3.4,
+    "valorHora": 7000,
+    "largo": 4.5,
+    "id": "MONZA",
+    "tipoCancha": "LADRILLO"
+    },
+    "socio": {
+    "direccion": "Cra 9 #45-67",
+    "id": "ABC22",
+    "telefono": "3007896541",
+    "nombre": "Laura Mejía"
+  },
+    "fechaHoraInicio": "2025-04-01T13:00",
+    "fechaHoraFin": "2025-04-01T17:00"
+}

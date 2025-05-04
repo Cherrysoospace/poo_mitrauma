@@ -1,0 +1,42 @@
+[
+  {
+    "descripcion": "ndjnd  ndkdn djnkd jnd",
+    "area": 4.5,
+    "tipoInstalacion": "Pisicina Olímpica",
+    "ancho": 1.8,
+    "valorHora": 15000,
+    "largo": 2.5,
+    "id": "Y1O42",
+    "olimpica": true
+  },
+  {
+    "descripcion": "Piscina semiolímpica para entrenamiento general",
+    "area": 406,
+    "tipoInstalacion": "Pisicina Olímpica",
+    "ancho": 14,
+    "valorHora": 15000,
+    "largo": 29,
+    "id": "LRDTT",
+    "olimpica": true
+  },
+  {
+    "descripcion": "Piscina no olímpica para entrenamiento general",
+    "area": 406,
+    "tipoInstalacion": "Pisicina Olímpica",
+    "ancho": 14,
+    "valorHora": 15000,
+    "largo": 29,
+    "id": "GLID4",
+    "olimpica": true
+  },
+  {
+    "descripcion": "Piscina no olímpica para entrenamiento general",
+    "area": 120,
+    "tipoInstalacion": "Pisicina Olímpica",
+    "ancho": 10,
+    "valorHora": 15000,
+    "largo": 12,
+    "id": "NOSF2",
+    "olimpica": true
+  }
+]
