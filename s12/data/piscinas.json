@@ -1,7 +1,7 @@
 [
   {
-    "descripcion": "ndjnd  ndkdn djnkd jnd",
     "area": 4.5,
+    "descripcion": "Piscina Olímpica sencilla para entrenamientos de corta duración.",
     "tipoInstalacion": "Pisicina Olímpica",
     "ancho": 1.8,
     "valorHora": 15000,
@@ -10,8 +10,8 @@
     "olimpica": true
   },
   {
-    "descripcion": "Piscina semiolímpica para entrenamiento general",
     "area": 406,
+    "descripcion": "Piscina semiolímpica para entrenamiento general",
     "tipoInstalacion": "Pisicina Olímpica",
     "ancho": 14,
     "valorHora": 15000,
@@ -20,8 +20,8 @@
     "olimpica": true
   },
   {
-    "descripcion": "Piscina no olímpica para entrenamiento general",
     "area": 406,
+    "descripcion": "Piscina no olímpica para entrenamiento general",
     "tipoInstalacion": "Pisicina Olímpica",
     "ancho": 14,
     "valorHora": 15000,
@@ -30,8 +30,8 @@
     "olimpica": true
   },
   {
-    "descripcion": "Piscina no olímpica para entrenamiento general",
     "area": 120,
+    "descripcion": "Piscina no olímpica para entrenamiento general",
     "tipoInstalacion": "Pisicina Olímpica",
     "ancho": 10,
     "valorHora": 15000,

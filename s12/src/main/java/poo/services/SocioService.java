@@ -98,6 +98,7 @@ public class SocioService implements Service<Socio> {
        // buscar la posición del socio en la lista y actualizarlo
        list.set(i, socio);
 
+       Utils.updateFile("socio", "id", id, socio.toJSONObject(), Utils.getConfig("archivos").getString("alquileres"));
        // actualizar el archivo de socios
        Utils.writeJSON(list, fileName);
 

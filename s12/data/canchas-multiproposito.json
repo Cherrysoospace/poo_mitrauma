@@ -1,7 +1,7 @@
 [
   {
-    "descripcion": "Cancha Multipropósito inspirada en F1 Campeonato 1994",
     "area": 7.3500000000000005,
+    "descripcion": "Cancha Multipropósito inspirada en F1 Campeonato 1994",
     "graderia": true,
     "tipoInstalacion": "Cancha multipróposito",
     "ancho": 2.1,
@@ -10,8 +10,8 @@
     "id": "A2V36"
   },
   {
-    "descripcion": "Cancha techada para fútbol sala y baloncesto",
     "area": 800,
+    "descripcion": "Cancha techada para fútbol sala y baloncesto",
     "graderia": true,
     "tipoInstalacion": "Cancha multipróposito",
     "ancho": 20,
@@ -20,8 +20,8 @@
     "id": "4BJNI"
   },
   {
-    "descripcion": "Cancha comunitaria para voleibol y eventos recreativos",
     "area": 648,
+    "descripcion": "Cancha comunitaria para voleibol y eventos recreativos",
     "graderia": false,
     "tipoInstalacion": "Cancha multipróposito",
     "ancho": 18,
@@ -30,8 +30,8 @@
     "id": "T40M5"
   },
   {
-    "descripcion": "Cancha profesional para torneos múltiples, techada",
     "area": 968,
+    "descripcion": "Cancha profesional para torneos múltiples, techada",
     "graderia": true,
     "tipoInstalacion": "Cancha multipróposito",
     "ancho": 22,
@@ -40,18 +40,8 @@
     "id": "UI8KY"
   },
   {
-    "descripcion": "Cancha escolar de uso mixto al aire libre",
-    "area": 512,
-    "graderia": false,
-    "tipoInstalacion": "Cancha multipróposito",
-    "ancho": 16,
-    "valorHora": 5000,
-    "largo": 32,
-    "id": "VJ4CW"
-  },
-  {
-    "descripcion": "Cancha Multipróposito con temática de F1 Campeonato de 2005",
     "area": 7.3500000000000005,
+    "descripcion": "Cancha Multipróposito con temática de F1 Campeonato de 2005",
     "graderia": true,
     "tipoInstalacion": "Cancha multipróposito",
     "ancho": 2.1,
@@ -60,13 +50,23 @@
     "id": "R25FA"
   },
   {
-    "descripcion": "Cancha Multipropósito inspirada en el Monaco GP en el Campeonato F1 1984 ",
     "area": 6.2,
+    "descripcion": "Cancha Multipropósito inspirada en el Monaco GP en el Campeonato F1 1984 ",
     "graderia": true,
     "tipoInstalacion": "Cancha multipróposito",
     "ancho": 2,
     "valorHora": 5000,
     "largo": 3.1,
     "id": "G0RFK"
+  },
+  {
+    "area": 450,
+    "descripcion": "Cancha escolar de uso mixto al aire libre",
+    "graderia": false,
+    "tipoInstalacion": "Cancha multipróposito",
+    "ancho": 15,
+    "valorHora": 5000,
+    "largo": 30,
+    "id": "VJ4CW"
   }
 ]

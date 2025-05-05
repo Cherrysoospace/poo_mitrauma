@@ -192,29 +192,40 @@ public class InstalacionDeportivaService implements Service<InstalacionDeportiva
     public JSONObject update(String id, String strJson) throws Exception {
         // Create a JSONObject with the keys and values to update
         JSONObject newData = new JSONObject(strJson);
-
+    
         // Find the sports facility to update and remember its position
         InstalacionDeportiva instalacion = getItem(id);
-
+    
         if (instalacion == null) {
             throw new NullPointerException("No se encontró la instalación deportiva " + id);
         }
         int i = list.indexOf(instalacion);
-
+    
         // Update the facility with new data
         instalacion = getUpdated(newData, instalacion);
-
+    
         // Si no se especificó un valor de hora en la actualización, asegurar que se mantiene la tarifa
         if (!newData.has("valorHora")) {
             instalacion.setValorHora(tarifa);
         }
-
+    
         // Update the facility in the list
         list.set(i, instalacion);
-
+        
+        // Actualizar la instalación deportiva en el archivo de alquileres utilizando el método especializado
+        try {
+            boolean updated = Utils.updateInstalacionReferences(id, instalacion.toJSONObject());
+            if (Utils.trace) {
+                System.out.println("Actualización de referencias en alquileres: " + (updated ? "Exitosa" : "No requerida"));
+            }
+        } catch (Exception e) {
+            System.out.println("Error al actualizar referencias: " + e.getMessage());
+            Utils.printStackTrace(e);
+        }
+        
         // Update the JSON file
         Utils.writeJSON(list, fileName);
-
+    
         // Return the updated facility
         return new JSONObject().put("message", "ok").put("data", instalacion.toJSONObject());
     }
@@ -240,7 +251,9 @@ public class InstalacionDeportivaService implements Service<InstalacionDeportiva
 
         String alquileres = Utils.getConfig("archivos").getString("alquileres");
         // Check if the facility has any rentals and don't allow deletion if it does
-        if (Utils.exists(alquileres, "instalacion", instalacion)) {
+        // Usar método exists buscando por "instalacionDeportiva" y comparando el id
+        JSONObject jsonId = new JSONObject().put("id", id);
+        if (Utils.exists(alquileres, "instalacionDeportiva", jsonId, "id")) {
             throw new Exception(
                     String.format("No eliminado. La instalación deportiva %s tiene alquileres registrados", id));
         }

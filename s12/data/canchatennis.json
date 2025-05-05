@@ -1,7 +1,7 @@
 [
   {
-    "descripcion": "jejn dnkdnd ndknd nkd kndkd ",
     "area": 7.68,
+    "descripcion": "jejn dnkdnd ndknd nkd kndkd ",
     "tipoInstalacion": "Tipo: Cancha de tenis en césped",
     "ancho": 2.4,
     "valorHora": 7000,
@@ -10,18 +10,18 @@
     "tipoCancha": "CESPED"
   },
   {
-    "descripcion": "Cancha profesional de tenis en césped natural",
     "area": 260.75690000000003,
-    "tipoInstalacion": "Tipo: Cancha de tenis en césped",
+    "descripcion": "Cancha profesional de tenis en tierra batida",
+    "tipoInstalacion": "Tipo: Otros tipos de superficie",
     "ancho": 10.97,
     "valorHora": 7000,
     "largo": 23.77,
     "id": "EI43R",
-    "tipoCancha": "CESPED"
+    "tipoCancha": "OTRO"
   },
   {
-    "descripcion": "Cancha de entrenamiento con superficie de ladrillo",
     "area": 264,
+    "descripcion": "Cancha de entrenamiento con superficie de ladrillo",
     "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
     "ancho": 11,
     "valorHora": 7000,
@@ -30,8 +30,8 @@
     "tipoCancha": "LADRILLO"
   },
   {
-    "descripcion": "Cancha recreativa para tenis amateur en cemento",
     "area": 246.75,
+    "descripcion": "Cancha recreativa para tenis amateur en cemento",
     "tipoInstalacion": "Tipo: Otros tipos de superficie",
     "ancho": 10.5,
     "valorHora": 7000,
@@ -40,8 +40,8 @@
     "tipoCancha": "OTRO"
   },
   {
-    "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "area": 268.275,
+    "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
     "ancho": 10.95,
     "valorHora": 7000,
@@ -50,18 +50,18 @@
     "tipoCancha": "LADRILLO"
   },
   {
+    "area": 14.19,
     "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
-    "area": 15.299999999999999,
     "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
-    "ancho": 3.4,
+    "ancho": 3.3,
     "valorHora": 7000,
-    "largo": 4.5,
+    "largo": 4.3,
     "id": "MONZA",
     "tipoCancha": "LADRILLO"
   },
   {
-    "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "area": 268.275,
+    "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "tipoInstalacion": "Tipo: Cancha de tenis en césped",
     "ancho": 10.95,
     "valorHora": 7000,
@@ -70,8 +70,8 @@
     "tipoCancha": "CESPED"
   },
   {
-    "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "area": 268.275,
+    "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "tipoInstalacion": "Tipo: Otros tipos de superficie",
     "ancho": 10.95,
     "valorHora": 7000,
@@ -80,8 +80,8 @@
     "tipoCancha": "OTRO"
   },
   {
-    "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "area": 268.275,
+    "descripcion": "Cancha clásica de tierra batida para torneos locales",
     "tipoInstalacion": "Tipo: Otros tipos de superficie",
     "ancho": 10.95,
     "valorHora": 7000,
@@ -90,8 +90,8 @@
     "tipoCancha": "OTRO"
   },
   {
-    "descripcion": "Cancha Tennis con superficie de ladrillo, perfecta para entrenamientos de corta duración.",
     "area": 11.25,
+    "descripcion": "Cancha Tennis con superficie de ladrillo, perfecta para entrenamientos de corta duración.",
     "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
     "ancho": 2.5,
     "valorHora": 7000,

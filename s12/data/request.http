@@ -151,14 +151,65 @@ POST {{url}}/alquiler
 Content-Type: application/json; charset=utf-8
 
 {
-    "fechaHoraInicio": "2025-04-01T12:00",
-    "fechaHoraFin": "2025-04-01T14:00",
-    "socio": "S0020",
-    "instalacionDeportiva": "VJ4CW"
+    "fechaHoraInicio": "2025-05-01T10:00",
+    "fechaHoraFin": "2025-05-01T14:00",
+    "socio": "00TTL",
+    "instalacionDeportiva": "LRDTT"
 }
 
 
 ### PRUEBAS PATCH ----------->
+###PATCH PARA SOCIO NO REFERENCIADO
+PATCH {{url}}/socio/ABC22
+Content-Type: application/json; charset=utf-8
+
+{
+    "direccion": "Cra 12 #15-06, Medellín, Antioquia",
+    "nombre": "John D. Carmack"
+}
+
+### PATCH SOCIO REFERENCIADO
+PATCH {{url}}/socio/PQQD6
+Content-Type: application/json; charset=utf-8
+
+{
+    "nombre": "Marco Aurelio Rodríguez Albernathy",
+    "direccion": "Calle 21 #11-03, Cali, Valle del Cuaca"
+}
+
+### PATCH INSTALACION REFERENCIADA
+PATCH {{url}}/canchamultiproposito/VJ4CW
+Content-Type: application/json; charset=utf-8
+
+{
+   "largo": 30,
+   "ancho": 15
+}
+
+### PATCH INSTALACION NO REFERENCIADA
+PATCH {{url}}/piscina/Y1O42
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Piscina Olímpica sencilla para entrenamientos de corta duración."
+}
+
+###PACTCH PARA CANCHA TENNIS
+PATCH {{url}}/canchatennis/EI43R
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Cancha profesional de tenis en tierra batida",
+    "tipoCancha": "OTRO"
+}
+
+### PATCH PARA ALQUILER
+PATCH {{url}}/alquiler/H4FCM
+Content-Type: application/json; charset=utf-8
+
+{
+    "fechaHoraFin": "2025-05-01T13:00"
+}
 
 ### PRUEBAS DELETE ---------->
 ##DELETE PARA SOCIO NO REFERENCIADO
@@ -177,7 +228,13 @@ DELETE {{url}}/canchamultiproposito/1GE20
 DELETE {{url}}/alquiler/YDVQG
 
 
-### DELETE PARA REFERENCIADOS
+### DELETE PARA REFERENCIADOS --------------------->
+### PRUEBA DELETE PARA SOCIO REFERENCIADO
+DELETE {{url}}/socio/PQQD6
+
+### PRUEBA DELETE PARA INSTALACION REFERENCIADA 
+DELETE {{url}}/canchamultiproposito/VJ4CW
+
 
 ### PRUEBA DE CRUCE DE HORARIOS :d
 POST {{url}}/alquiler

@@ -18,10 +18,10 @@
     "nombre": "Daniela López"
   },
   {
-    "direccion": "Cra 9 #45-67",
+    "direccion": "Cra 12 #15-06, Medellín, Antioquia",
     "id": "ABC22",
     "telefono": "3007896541",
-    "nombre": "Laura Mejía"
+    "nombre": "John D. Carmack"
   },
   {
     "direccion": "Calle 40 #18-90",
@@ -30,9 +30,9 @@
     "nombre": "Daniela López"
   },
   {
-    "direccion": "Calle 21 #11-03, Buga, Valle del Cuaca",
+    "direccion": "Calle 21 #11-03, Cali, Valle del Cuaca",
     "id": "PQQD6",
     "telefono": "315 445 6783",
-    "nombre": "Jaime Alberto Rodríguez"
+    "nombre": "Marco Aurelio Rodríguez Albernathy"
   }
 ]

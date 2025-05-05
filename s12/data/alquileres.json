@@ -1,23 +1,71 @@
-[{
-  "horas": 2,
-  "instalacionDeportiva": {
-    "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
-    "area": 15.299999999999999,
-    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
-    "ancho": 3.4,
-    "valorHora": 7000,
-    "largo": 4.5,
-    "id": "MONZA",
-    "tipoCancha": "LADRILLO"
+[
+  {
+    "horas": 2,
+    "instalacionDeportiva": {
+      "area": 14.19,
+      "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+      "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+      "ancho": 3.3,
+      "valorHora": 7000,
+      "largo": 4.3,
+      "id": "MONZA",
+      "tipoCancha": "LADRILLO"
+    },
+    "socio": {
+      "direccion": "Calle 21 #11-03, Cali, Valle del Cuaca",
+      "id": "PQQD6",
+      "telefono": "315 445 6783",
+      "nombre": "Marco Aurelio Rodríguez Albernathy"
+    },
+    "valorAlquiler": 14000,
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "id": "ZX1V2",
+    "fechaHoraFin": "2025-04-01T14:00"
   },
-  "socio": {
-    "direccion": "Calle 21 #11-03, Buga, Valle del Cuaca",
-    "id": "PQQD6",
-    "telefono": "315 445 6783",
-    "nombre": "Jaime Alberto Rodríguez"
+  {
+    "horas": 2,
+    "instalacionDeportiva": {
+      "area": 450,
+      "descripcion": "Cancha escolar de uso mixto al aire libre",
+      "graderia": false,
+      "tipoInstalacion": "Cancha multipróposito",
+      "ancho": 15,
+      "valorHora": 5000,
+      "largo": 30,
+      "id": "VJ4CW"
+    },
+    "socio": {
+      "direccion": "Calle 72 #10-15, Bogotá D.C.",
+      "id": "S0020",
+      "telefono": "310 456 7890",
+      "nombre": "Laura Rodríguez"
+    },
+    "valorAlquiler": 10000,
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "id": "2CRI1",
+    "fechaHoraFin": "2025-04-01T14:00"
   },
-  "valorAlquiler": 14000,
-  "fechaHoraInicio": "2025-04-01T12:00",
-  "id": "ZX1V2",
-  "fechaHoraFin": "2025-04-01T14:00"
-}]
+  {
+    "horas": 3,
+    "instalacionDeportiva": {
+      "area": 406,
+      "descripcion": "Piscina semiolímpica para entrenamiento general",
+      "tipoInstalacion": "Pisicina Olímpica",
+      "ancho": 14,
+      "valorHora": 15000,
+      "largo": 29,
+      "id": "LRDTT",
+      "olimpica": true
+    },
+    "socio": {
+      "direccion": "Calle 40 #18-90",
+      "id": "00TTL",
+      "telefono": "316 334 5567",
+      "nombre": "Daniela López"
+    },
+    "valorAlquiler": 45000,
+    "fechaHoraInicio": "2025-05-01T10:00",
+    "id": "H4FCM",
+    "fechaHoraFin": "2025-05-01T13:00"
+  }
+]

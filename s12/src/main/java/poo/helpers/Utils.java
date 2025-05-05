@@ -26,19 +26,23 @@ public class Utils {
   public static final String PATH = "./data/";
   public static boolean trace = false;
 
-  private Utils() {} // lo mismo en Keyboard
+  private Utils() {
+  } // lo mismo en Keyboard
 
   public static void printStackTrace(Exception e) {
     if (Utils.trace) {
-      System.out.printf("%s%s%s%s%s%n", Color.RED, "-".repeat(30), " Reporte de excepciones ", "-".repeat(30), Color.RESET);
+      System.out.printf("%s%s%s%s%s%n", Color.RED, "-".repeat(30), " Reporte de excepciones ", "-".repeat(30),
+          Color.RESET);
       e.printStackTrace(System.out);
-      System.out.printf("%s%s%s%s%s%n", Color.RED, "-".repeat(30), " Fin del reporte de excepciones ", "-".repeat(30), Color.RESET);
+      System.out.printf("%s%s%s%s%s%n", Color.RED, "-".repeat(30), " Fin del reporte de excepciones ", "-".repeat(30),
+          Color.RESET);
     }
   }
 
   /**
    * Genera un string de caracteres alfanuméricos aleatorios de una longitud dada
    * Ver: https://www.baeldung.com/java-random-string
+   * 
    * @param stringLength La longitud que se requiere para el string
    * @return Un string de caracteres alfanuméricos aleatorios de una longitud
    */
@@ -87,6 +91,7 @@ public class Utils {
 
   /**
    * Crea la ruta padre indicada en el argumento recibido si no existe
+   * 
    * @param filePath Un String que representa una ruta válida
    * @return Una instancia de Path con la ruta original
    * @throws IOException
@@ -104,7 +109,8 @@ public class Utils {
 
   public static void _writeText(List<?> list, String fileName) throws Exception {
     initPath(fileName);
-    try (FileWriter fw = new FileWriter(new File(fileName), StandardCharsets.UTF_8); BufferedWriter writer = new BufferedWriter(fw)) {
+    try (FileWriter fw = new FileWriter(new File(fileName), StandardCharsets.UTF_8);
+        BufferedWriter writer = new BufferedWriter(fw)) {
       for (int i = 0; i < list.size(); i++) {
         writer.append(list.get(i).toString());
         writer.newLine();
@@ -135,6 +141,7 @@ public class Utils {
 
   /**
    * Convierte parámetros de una URL en una representación JSON
+   * 
    * @param s Algo así como param1=value1&param2=value2...
    * @return Un String JSON con los pares paramX=valueX de s
    * @throws IOException
@@ -148,7 +155,9 @@ public class Utils {
   }
 
   /**
-   * Convierte un número par de strings en una representación json {key:value, ...}
+   * Convierte un número par de strings en una representación json {key:value,
+   * ...}
+   * 
    * @param strings los strings (en número par) que se convierten a json
    * @return Un String JSON con los pares key=value de strings
    */
@@ -165,11 +174,15 @@ public class Utils {
   }
 
   /**
-   * Verifica en cualquier archivo de tipo JSON si un objeto está contenido en uno de los objetos
+   * Verifica en cualquier archivo de tipo JSON si un objeto está contenido en uno
+   * de los objetos
    * JSON que conforman el array de objetos JSON contenido en el archivo.
-   * @param fileName El nombre del archivo sin extensión, que contiene el array de objetos JSON
-   * @param key La clave o atributo que identifica el objeto JSON a buscar dentro de cada objeto
-   * @param search El objeto JSON a buscar
+   * 
+   * @param fileName El nombre del archivo sin extensión, que contiene el array de
+   *                 objetos JSON
+   * @param key      La clave o atributo que identifica el objeto JSON a buscar
+   *                 dentro de cada objeto
+   * @param search   El objeto JSON a buscar
    * @return True si se encuentra que search alguno de los objetos del array
    * @throws Exception
    */
@@ -199,12 +212,18 @@ public class Utils {
   }
 
   /**
-   * Verifica en cualquier archivo de tipo JSON si un objeto con una propiedad determinada, está
-   *  contenido en uno de los objetos JSON que conforman el array de objetos JSON contenido en el archivo.
-   * @param fileName El nombre del archivo sin extensión, que contiene el array de objetos JSON
-   * @param key La clave o atributo que identifica el objeto JSON a buscar dentro de cada objeto
-   * @param search El objeto JSON a buscar
-   * @param property La clave del objeto que se usa para hacer la comparación. Ej.: "id"
+   * Verifica en cualquier archivo de tipo JSON si un objeto con una propiedad
+   * determinada, está
+   * contenido en uno de los objetos JSON que conforman el array de objetos JSON
+   * contenido en el archivo.
+   * 
+   * @param fileName El nombre del archivo sin extensión, que contiene el array de
+   *                 objetos JSON
+   * @param key      La clave o atributo que identifica el objeto JSON a buscar
+   *                 dentro de cada objeto
+   * @param search   El objeto JSON a buscar
+   * @param property La clave del objeto que se usa para hacer la comparación.
+   *                 Ej.: "id"
    * @return True si se encuentra que search alguno de los objetos del array
    * @throws Exception
    */
@@ -222,7 +241,8 @@ public class Utils {
       if (jsonObj.has(key)) {
         // De la instancia actual obtener el objeto JSON que se requiere verificar
         jsonObj = jsonObj.getJSONObject(key);
-        // OJO >>> utilizar una de las propiedades de los objetos para hacer la comparación
+        // OJO >>> utilizar una de las propiedades de los objetos para hacer la
+        // comparación
         if (jsonObj.optString(property).equals(search.optString(property))) {
           return true;
         }
@@ -241,7 +261,8 @@ public class Utils {
   public static String stringOk(String key, int length, JSONObject json) {
     String value = json.getString(key);
     if (value.length() < length) {
-      throw new IllegalArgumentException(String.format("Se esperaban al menos %s caracteres: %s='%s'", length, key, value));
+      throw new IllegalArgumentException(
+          String.format("Se esperaban al menos %s caracteres: %s='%s'", length, key, value));
     }
     return value;
   }
@@ -249,11 +270,11 @@ public class Utils {
   public static double doubleOk(String key, double min, double max, JSONObject json) {
     double value = json.getDouble(key);
     if (value < min || value > max) {
-      throw new IllegalArgumentException(String.format("Se esperaba un valor entre %.2f y %.2f: %s=%.2f", min, max, key, value));
+      throw new IllegalArgumentException(
+          String.format("Se esperaba un valor entre %.2f y %.2f: %s=%.2f", min, max, key, value));
     }
     return value;
   }
-
 
   public static void ifExistsUpdateFile(JSONObject search, String fileName) throws IOException {
     String data = readText(PATH + fileName + ".json");
@@ -283,18 +304,171 @@ public class Utils {
     return (jsonObj.getJSONObject(key).getString("id").equals(search.getString("id")));
   }
 
-  public static boolean OverlapSchedules (LocalDateTime fechaHora1Inicio, LocalDateTime fechaHora1Fin,
-    LocalDateTime fechaHora2Inicio, LocalDateTime fechaHora2Fin) {
+  public static boolean OverlapSchedules(LocalDateTime fechaHora1Inicio, LocalDateTime fechaHora1Fin,
+      LocalDateTime fechaHora2Inicio, LocalDateTime fechaHora2Fin) {
     return ((fechaHora1Inicio.isBefore(fechaHora2Fin)) && (fechaHora2Inicio.isBefore(fechaHora1Fin)));
- 
-    }
 
-  public static JSONObject getConfig(String key) throws Exception {
-      String config = readText("./data/config.json");
-      JSONObject json = new JSONObject(config);
-      return json.getJSONObject(key);
   }
 
+  public static JSONObject getConfig(String key) throws Exception {
+    String config = readText("./data/config.json");
+    JSONObject json = new JSONObject(config);
+    return json.getJSONObject(key);
+  }
+
+  /**
+   * Actualiza un objeto JSON anidado dentro de otros objetos JSON de un archivo
+   * cuando encuentra una coincidencia
+   * basada en una clave y valor de búsqueda.
+   * 
+   * @param nested      La clave que contiene el objeto JSON anidado que se desea
+   *                    actualizar (ejemplo: "socio")
+   * @param searchKey   La clave dentro del objeto anidado que se usará para
+   *                    buscar (ejemplo: "id")
+   * @param searchValue El valor correspondiente a searchKey que se busca
+   *                    (ejemplo: "12345")
+   * @param newJson     El nuevo objeto JSON que reemplazará al objeto anidado
+   *                    encontrado
+   * @param fileName    La ruta del archivo donde se realizará la búsqueda y
+   *                    actualización
+   * @return true si se actualizó algún registro, false en caso contrario
+   * @throws IOException Si hay un error al leer o escribir el archivo
+   */
+
+  public static boolean updateFile(String nested, String searchKey, String searchValue, JSONObject newJson,
+      String fileName) {
+    try {
+      // Verificar si el archivo existe
+      if (!Utils.fileExists(fileName)) {
+        return false;
+      }
+
+      // Leer el contenido del archivo
+      String data = readText(fileName);
+      JSONArray jsonArray = new JSONArray(data);
+      boolean updated = false;
+
+      // Iterar sobre cada objeto del array
+      for (int i = 0; i < jsonArray.length(); i++) {
+        JSONObject jsonObj = jsonArray.getJSONObject(i);
+
+        // Verificar si el objeto tiene la clave anidada
+        if (jsonObj.has(nested)) {
+          // Obtener el objeto anidado
+          JSONObject nestedObj = jsonObj.getJSONObject(nested);
+
+          // Verificar si el objeto anidado tiene la clave de búsqueda y si coincide con
+          // el valor buscado
+          if (nestedObj.has(searchKey) &&
+              nestedObj.getString(searchKey).equals(searchValue)) {
+
+            // Actualizar el objeto anidado con el nuevo JSON
+            jsonArray.getJSONObject(i).put(nested, newJson);
+            updated = true;
+          }
+        }
+      }
+
+      // Si se actualizó algún registro, escribir los cambios en el archivo
+      if (updated) {
+        writeText(jsonArray.toString(2), fileName);
+      }
+
+      return updated;
+    } catch (IOException e) {
+      printStackTrace(e);
+      return false;
+    }
+  }
+
+  /**
+   * Actualiza las referencias de instalación deportiva en el archivo de
+   * alquileres.
+   * Este método mantiene la integridad referencial cuando se actualiza una
+   * instalación deportiva
+   * asegurando que todos los alquileres que la referencian también sean
+   * actualizados.
+   * 
+   * @param instalacionId El ID de la instalación deportiva que se está
+   *                      actualizando
+   * @param newData       El objeto JSON con los datos actualizados de la
+   *                      instalación deportiva
+   * @return true si se actualizaron referencias, false si no hay referencias o no
+   *         se actualizaron
+   * @throws IOException Si hay un error al leer o escribir el archivo
+   */
+ /**
+ * Actualiza las referencias de instalación deportiva en el archivo de alquileres.
+ * Este método mantiene la integridad referencial cuando se actualiza una instalación deportiva
+ * asegurando que todos los alquileres que la referencian también sean actualizados.
+ * 
+ * @param instalacionId El ID de la instalación deportiva que se está actualizando
+ * @param newData El objeto JSON con los datos actualizados de la instalación deportiva
+ * @return true si se actualizaron referencias, false si no hay referencias o no se actualizaron
+ * @throws IOException Si hay un error al leer o escribir el archivo
+ */
+public static boolean updateInstalacionReferences(String instalacionId, JSONObject newData) throws IOException {
+  try {
+      // Obtener la ruta del archivo de alquileres desde la configuración
+      String alquileresFile = getConfig("archivos").getString("alquileres");
+      
+      if (!fileExists(alquileresFile)) {
+          return false;
+      }
+      
+      // Leer el contenido del archivo de alquileres
+      String content = readText(alquileresFile);
+      JSONArray alquileres = new JSONArray(content);
+      boolean updated = false;
+      
+      // Iterar sobre cada alquiler
+      for (int i = 0; i < alquileres.length(); i++) {
+          JSONObject alquiler = alquileres.getJSONObject(i);
+          
+          // Verificar si el alquiler referencia la instalación deportiva que estamos actualizando
+          // Comprobar ambos nombres de propiedad: "instalacion" e "instalacionDeportiva"
+          String[] posiblesPropiedades = {"instalacion", "instalacionDeportiva"};
+          
+          for (String propName : posiblesPropiedades) {
+              if (alquiler.has(propName)) {
+                  JSONObject instalacion = alquiler.getJSONObject(propName);
+                  
+                  if (instalacion.has("id") && instalacion.getString("id").equals(instalacionId)) {
+                      // Reemplazar la instalación deportiva con los nuevos datos
+                      alquiler.put(propName, newData);
+                      updated = true;
+                      
+                      // Recalcular el total del alquiler si es necesario
+                      if (alquiler.has("horas") && newData.has("valorHora")) {
+                          double horas = alquiler.getDouble("horas");
+                          double valorHora = newData.getDouble("valorHora");
+                          double nuevoTotal = horas * valorHora;
+                          
+                          // Actualizar el valor del alquiler (comprobar ambos nombres de propiedad)
+                          if (alquiler.has("total")) {
+                              alquiler.put("total", nuevoTotal);
+                          } else if (alquiler.has("valorAlquiler")) {
+                              alquiler.put("valorAlquiler", nuevoTotal);
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      
+      // Si se actualizó algún registro, escribir los cambios en el archivo
+      if (updated) {
+          writeText(alquileres.toString(2), alquileresFile);
+          // Registrar la actualización para depuración
+          if (trace) {
+              System.out.println("Se actualizaron referencias de instalación ID: " + instalacionId + " en alquileres");
+          }
+      }
+      
+      return updated;
+  } catch (Exception e) {
+      printStackTrace(e);
+      throw new IOException("Error al actualizar referencias de instalación deportiva: " + e.getMessage(), e);
+  }
 }
-
-
+}
